@@ -800,6 +800,10 @@ body.is-en .statement-title {
   letter-spacing: 0.055em;
 }
 
+.work-credit + .inline-award {
+  margin-top: 32px;
+}
+
 .inline-award strong {
   display: block;
   color: var(--ink);
@@ -820,6 +824,28 @@ body.is-en .statement-title {
   font-size: 10px;
   line-height: 1.8;
   letter-spacing: 0.035em;
+}
+
+.work-credit {
+  margin: 22px 0 0;
+  color: var(--muted);
+  font: 500 10px/1.8 var(--ui);
+  letter-spacing: 0.07em;
+}
+
+.work-credit a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.28em;
+  transition:
+    color 180ms ease,
+    opacity 180ms ease;
+}
+
+.work-credit a:hover,
+.work-credit a:focus-visible {
+  opacity: 0.58;
 }
 
 .project-section {
