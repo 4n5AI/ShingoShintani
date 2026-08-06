@@ -595,7 +595,8 @@ body.is-en .statement-title {
   cursor: pointer;
 }
 
-.work-preview img {
+.work-preview img,
+.work-preview video {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -668,7 +669,9 @@ body.is-en .statement-title {
 }
 
 .work-preview:hover img,
-.work-preview:focus-visible img {
+.work-preview:focus-visible img,
+.work-preview:hover video,
+.work-preview:focus-visible video {
   transform: scale(1.025);
 }
 

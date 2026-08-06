@@ -39,9 +39,37 @@
     <title>Shingo Shintani | AI Creative Producer</title>
     <link rel="canonical" href="https://4n5ai.github.io/ShingoShintani/" />
     <link rel="icon" type="image/png" sizes="64x64" href="./assets/favicon.png" />
-    <link rel="apple-touch-icon" href="./assets/shingo-profile.jpg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png" />
     <link rel="stylesheet" href="./styles.css" />
     <script src="./script.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Shingo Shintani",
+        "url": "https://4n5ai.github.io/ShingoShintani/",
+        "image": "https://4n5ai.github.io/ShingoShintani/assets/shingo-profile.jpg",
+        "jobTitle": ["AI Creative Producer", "Generative AI Filmmaker"],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Tokyo",
+          "addressCountry": "JP"
+        },
+        "email": "mailto:shingo.shintani@chocomint.jp",
+        "sameAs": [
+          "https://www.instagram.com/shingo4987.film/",
+          "https://x.com/4n5AI",
+          "https://www.linkedin.com/in/shingo-shintani-80539260/",
+          "https://lit.link/shingo4987film"
+        ],
+        "award": [
+          "Silver AI Performance Award - OMNI: International AI Film Festival (2026)",
+          "Best AI Film - Milan Indie Film Festival (2026)",
+          "Best AI Film - Spring Time International Film Festival (2026)",
+          "Best Drama - LAAIMPA (2026)"
+        ]
+      }
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -73,9 +101,9 @@
         </nav>
 
         <div class="language-switch" aria-label="Language">
-          <button type="button" class="is-active" data-language="jp">JP</button>
+          <button type="button" class="is-active" data-language="jp" aria-pressed="true">JP</button>
           <span aria-hidden="true">/</span>
-          <button type="button" data-language="en">EN</button>
+          <button type="button" data-language="en" aria-pressed="false">EN</button>
         </div>
       </div>
     </header>
@@ -183,14 +211,20 @@
               aria-label="『AI アイ』を音声付きで再生"
               data-open-work-player
             >
-              <img
-                src="./assets/ai-eye-preview.gif"
-                alt=""
+              <video
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                poster="./assets/ai-eye-poster.jpg"
                 width="800"
                 height="450"
-                loading="lazy"
-                decoding="async"
-              />
+                aria-hidden="true"
+                tabindex="-1"
+              >
+                <source src="./assets/ai-eye-preview.mp4" type="video/mp4" />
+              </video>
               <span class="work-preview-shade" aria-hidden="true"></span>
               <span class="work-preview-play" aria-hidden="true">
                 <i></i>

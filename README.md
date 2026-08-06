@@ -10,14 +10,14 @@
 
 以下は未提供のため、推測で埋めずにプレースホルダーとしてあります。
 
-- Featured Work: 『AI アイ』の正式な作品スチル
-- Statement / Project: 使用許諾済みの静止画・イベントビジュアル
+- Statement: 使用許諾済みの静止画
 
 Hero動画は `assets/hero-film.mp4`、初期表示画像は
 `assets/hero-poster.jpg` を使用しています。
 プロフィール画像は `assets/shingo-profile.jpg` を使用しています。
-Featured WorkのGIFプレビューは `assets/ai-eye-preview.gif`、
-音声付き本編は `assets/ai-eye-film.mp4` を使用しています。
+Featured Workのミュートループプレビューは `assets/ai-eye-preview.mp4`、
+音声付き本編は `assets/ai-eye-film.mp4` を使用しています
+（プレビューはGIFから軽量なmp4に変換済み、約9.7MB→589KB）。
 PROJECT画像は `assets/omni-tokyo-project.png` を使用しています。
 
 画像を追加する場合は `assets/` フォルダを作成し、`index.html` 内の対応する抽象ビジュアルを `img` または `video` に置き換えてください。
