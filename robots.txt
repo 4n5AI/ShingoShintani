@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://4n5ai.github.io/ShingoShintani/sitemap.xml

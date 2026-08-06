@@ -71,6 +71,24 @@ workPlayer?.addEventListener("cancel", (event) => {
   closeWorkPlayer();
 });
 
+const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+const autoplayVideos = document.querySelectorAll("video[autoplay]");
+
+const applyMotionPreference = (prefersReduced) => {
+  autoplayVideos.forEach((video) => {
+    if (prefersReduced) {
+      video.pause();
+    } else if (video.paused) {
+      video.play().catch(() => {
+        // Native controls remain available if autoplay is blocked.
+      });
+    }
+  });
+};
+
+applyMotionPreference(reduceMotionQuery.matches);
+reduceMotionQuery.addEventListener("change", (event) => applyMotionPreference(event.matches));
+
 if ("IntersectionObserver" in window) {
   const revealObserver = new IntersectionObserver(
     (entries, observer) => {
